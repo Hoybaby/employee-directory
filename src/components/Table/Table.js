@@ -1,12 +1,23 @@
+// import API from "../../utils/API";
+
 const TableBootstrap = () => {
+  
+    
+    
+    
+    
+    
+    
+    
+    
     return (
-        <table class="table table-striped">
+        <table className="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Email</th>
                 </tr>
             </thead>
             <tbody>
@@ -14,19 +25,19 @@ const TableBootstrap = () => {
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>email1</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
                     <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>email2</td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Larry</td>
                     <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td>email3</td>
                 </tr>
             </tbody>
         </table>
