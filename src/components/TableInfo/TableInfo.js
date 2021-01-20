@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getEmployeeName from '../../utils/API';
+import API from '../../utils/API';
 
 
 export default class TableInfo extends Component() {
@@ -9,22 +9,9 @@ export default class TableInfo extends Component() {
         employees: [{}]
     };
 
-    componentDidMount = () => {
-        this.loadEmployees();
-    }
-
-    handleInputChange = (event) => {
-        const { name, value } = event.target;
-        this.setState(
-            {
-                [name]: value
-            }
-        )
-    }
-
-    loadEmployees = () => [
-        getEmployeeName()
-            .then((response) => {
+    componentDidMount() {
+        
+        API.getEmployeeName().then(response => {
                 console.log(response);
                 this.setState(
                     {
@@ -37,60 +24,89 @@ export default class TableInfo extends Component() {
             .catch((err) => {
                 console.log(err);
             })
-    ]
-
-    findEmployee = () => {
-        getEmployeeName()
-            .then((response) => {
-                console.log(response);
-
-                let filter = this.state.search;
-
-                let filteredList = response.data.results.filter(item => {
-
-                    let values = Object.values(item.name.first)
-                        .join("")
-                        .toLowerCase();
-                    return values.indexOf(filter.toLowerCase()) !== -1;
-                });
-
-                this.setState(
-                    {
-                        employees: filteredList
-                    }
-                )
-
-
-            })
-
-            .catch((err) => {
-                console.log(err);
-
-            })
+    
     }
 
-    handleInputSubmit = (event) => {
-        event.preventDefault();
-        console.log("stuff");
+    // handleInputChange = (event) => {
+    //     const { name, value } = event.target;
+    //     this.setState(
+    //         {
+    //             [name]: value
+    //         }
+    //     )
+    // }
 
-        this.searchEmployee();
+    // loadEmployees = () => [
+    //     getEmployeeName()
+    //         .then((response) => {
+    //             console.log(response);
+    //             this.setState(
+    //                 {
+    //                     // API returns "results" 
+    //                     employees: response.data.results
+    //                 }
+    //             )
 
-    }
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // ]
+
+    // findEmployee = () => {
+    //     getEmployeeName()
+    //         .then((response) => {
+    //             console.log(response);
+
+    //             let filter = this.state.search;
+
+    //             let filteredList = response.data.results.filter(item => {
+
+    //                 let values = Object.values(item.name.first)
+    //                     .join("")
+    //                     .toLowerCase();
+    //                 return values.indexOf(filter.toLowerCase()) !== -1;
+    //             });
+
+    //             this.setState(
+    //                 {
+    //                     employees: filteredList
+    //                 }
+    //             )
 
 
-    SortByName = (e) => {
-        function handleClick(e) {
-            e.preventDefault();
-            console.log('The link was clicked!');
-        }
-    }
+    //         })
+
+    //         .catch((err) => {
+    //             console.log(err);
+
+    //         })
+    // }
+
+    // handleInputSubmit = (event) => {
+    //     event.preventDefault();
+    //     console.log("stuff");
+
+    //     this.searchEmployee();
+
+    // }
+
+
+    // SortByName = (e) => {
+    //     function handleClick(e) {
+    //         e.preventDefault();
+    //         console.log('The link was clicked!');
+    //     }
+    // }
 
 
     render () {
+        return (
 
-        <div className="App">
+        <div>
+            {JSON.stringify(employees)}
     
         </div>
     
-    }
+        )}
 }
