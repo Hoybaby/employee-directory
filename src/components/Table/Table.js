@@ -1,6 +1,7 @@
 // import API from "../../utils/API";
 import axios from 'axios';
 import React from 'react';
+import Search from '../Search/Search';
 
 
 class Table extends React.Component {
@@ -48,4 +49,17 @@ class Table extends React.Component {
             this.setState({ sortDirection: 0});
         }
     }
+
+
+    render() {
+        return (
+            <div>
+                <Search search={this.state.search} handleInputChange={this.handleInputChange}/>
+            </div>
+        )
+    }
+
+
+
 }
+
