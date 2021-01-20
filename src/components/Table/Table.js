@@ -43,7 +43,7 @@ class Table extends React.Component {
             
         } else {
             this.setState({
-                employees: this.state.users.sort((a,b) => 
+                employees: this.state.employees.sort((a,b) => 
                     a.name <b.name.first ? 1: -1),
             });
             this.setState({ sortDirection: 0});
@@ -58,8 +58,8 @@ class Table extends React.Component {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">Iamge</th>
-                            <th onClick={() => this.sortByName()}Name></th>
+                            <th scope="col">Image</th>
+                            <th onClick={() => this.sortByName()}>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
                             <th>Date of Birthday</th>
