@@ -1,15 +1,13 @@
 import "./style.css";
 import React from "react";
 
+
+
 function Search() {
     return (
         <div>
-            <form onSubmit={this.props.handleSubmit}>
-                <input 
-                name="search"
-                value={this.props.search}
-                onChange={this.props.handleInputChange}
-                >
+            <form >
+                <input                >
                 </input>
 
                 <button>

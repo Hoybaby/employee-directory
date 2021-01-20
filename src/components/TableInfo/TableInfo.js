@@ -4,14 +4,6 @@ import getEmployeeName from '../../utils/API';
 
 export default class TableInfo extends Component() {
 
-    // let [users, setUsers] = useState([]);
-    // // The useEffect() hook fires any time that the component is rendered.
-    // // An empty array is passed as the second argument so that the effect only fires once.
-    // useEffect(() => {
-    //   axios
-    //     .get("https://randomuser.me/api/?results=200&nat=us")
-    //     .then(response => setUsers(response.data));
-    // }, []);
     state = {
         search: "name",
         employees: [{}]
@@ -97,17 +89,8 @@ export default class TableInfo extends Component() {
     render () {
 
         <div className="App">
-            {/* <h2>The JSON below is loaded from an external API!</h2>
-        <code>{JSON.stringify(users)}</code> */}
-            {/* </div> */}
-            {/* // <div> */}
-      //   <Jumbotron />
-      //   <Search />
-      //   <TableBootstrap />
-
-      // </div>
+    
+        </div>
     
     }
 }
-
-export default TableInfo;

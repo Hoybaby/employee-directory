@@ -10,7 +10,7 @@ const TableBootstrap = () => {
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Image</th>
-                    <th scope="col" onClick={this.props.SortByName}>Name</th>
+                    <th scope="col" >Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                 </tr>
