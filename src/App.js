@@ -25,10 +25,10 @@ function App() {
   return (
     
     <div className="App">
-      <h2>The JSON below is loaded from an external API!</h2>
-      <code>{JSON.stringify(users)}</code>
-    </div>
-    // <div>
+      {/* <h2>The JSON below is loaded from an external API!</h2>
+      <code>{JSON.stringify(users)}</code> */}
+    {/* </div> */}
+    {/* // <div> */}
     //   <Jumbotron/>
     //   <Search/>
     //   <TableBootstrap/>

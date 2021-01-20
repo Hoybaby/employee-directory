@@ -1,9 +1,11 @@
 import axios from "axios";
 
-const BASEURL = "https://randomuser.me/api/?results=200&nat=us"
 
-export default {
-    search: function() {
-        return axios.get(BASEURL);
-    }
+
+
+
+
+export default function getEmplyoeeName(query) {
+    const BASEURL = "https://randomuser.me/api/?results=200&nat=us";
+    return axios.get(BASEURL);
 }
