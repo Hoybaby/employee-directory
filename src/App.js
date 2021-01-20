@@ -65,6 +65,9 @@ function App() {
         let filteredList = response.data.results.filter(item => {
 
           let values = Object.values(item.name.first)
+            .join("")
+            .toLowerCase();
+          return values.indexOf(filter.toLowerCase()) !== -1;
         })
       })
   }
