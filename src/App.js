@@ -55,7 +55,19 @@ function App() {
           })
   ]
 
-  
+  findEmployee =() => {
+    getEmployeeName()
+      .then((response) => {
+        console.log(response);
+
+        let filter = this.state.search;
+
+        let filteredList = response.data.results.filter(item => {
+
+          let values = Object.values(item.name.first)
+        })
+      })
+  }
 
   
     
