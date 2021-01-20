@@ -6,9 +6,9 @@ import React from "react";
 
 function Search(props) {
     return (
-        <div class="container-fluid-center">
-            <form class='d-flex'>
-                <input name="search" class="form-control me-2" type="search" placeholder="Search" value={props.search} onChange={props.handleInputChance}/>
+        <div className="container-fluid-center">
+            <form className='d-flex'>
+                <input name="search" className="form-control me-2" type="search" placeholder="Search" value={props.search} onChange={props.handleInputChance}/>
             </form>
         </div>
 

@@ -55,7 +55,7 @@ class Table extends React.Component {
         return (
             <div>
                 <Search search={this.state.search} handleInputChange={this.handleInputChange}/>
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th scope="col">Iamge</th>
