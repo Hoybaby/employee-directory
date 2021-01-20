@@ -66,27 +66,27 @@ class Table extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { this.state.users
+                        {this.state.employees
                             .filter(
-                                (user) =>
-                                    user.name.first
+                                (employees) =>
+                                    employees.name.first
                                         .toLowerCase()
                                         .includes(this.state.search.toLocaleLowerCase()) ||
-                                    user.name.last
+                                    employees.name.last
                                         .toLowerCase()
                                         .includes(this.state.search.toLowerCase())
                             )
-                            .map((user) => (
-                                <tr key={user.name}>
+                            .map((employees) => (
+                                <tr key={employees.name}>
                                     <td>
-                                        <img src={user.picture.thumbnail} alt=""></img>
+                                        <img src={employees.picture.thumbnail} alt=""></img>
                                     </td>
                                     <td>
-                                        {user.name.first} {user.name.last}
+                                        {employees.name.first} {employees.name.last}
                                     </td>
-                                    <td>{user.phone}</td>
-                                    <td>{user.email}</td>
-                                    <td>{user.dob.date}</td>
+                                    <td>{employees.phone}</td>
+                                    <td>{employees.email}</td>
+                                    <td>{employees.dob.date}</td>
                                 </tr>
                             ))}
                     </tbody>
