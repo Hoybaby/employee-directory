@@ -6,6 +6,7 @@ import TableBootstrap from './components/Table/Table';
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { render } from '@testing-library/react';
+import getEmplyoeeName from './utils/API';
 
 
 
@@ -26,6 +27,29 @@ function App() {
 
     componentDidMount = () => {
       this.loadEmployees();
+    }
+
+    handleInputChange = (event) => {
+      const { name, value} = event.target;
+      this.setState (
+        {
+          [name]: value
+        }
+      )
+    }
+
+    loadEmployees = () => [
+      getEmplyoeeName()
+        .then((response) = {
+          console.log(response);
+          this.setState(
+            {
+              employees: response.data.results
+            }
+          )
+        })
+    ]
+
     }
 
   
