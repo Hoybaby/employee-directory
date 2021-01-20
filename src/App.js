@@ -38,19 +38,24 @@ function App() {
       )
     }
 
-    loadEmployees = () => [
-      getEmplyoeeName()
-        .then((response) = {
-          console.log(response);
-          this.setState(
-            {
-              employees: response.data.results
-            }
-          )
-        })
-    ]
+    lloadEmployees = () => [
+      getEmployeeName()
+          .then((response) => {
+              console.log(response);
+              this.setState(
+                  {
+                      // API returns "results" 
+                      employees: response.data.results
+                  }
+              )
 
-    }
+          })
+          .catch((err) => {
+              console.log(err);
+          })
+  ]
+
+  
 
   
     
