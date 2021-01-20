@@ -1,7 +1,8 @@
 
 import './App.css';
 import Jumbotron from './components/Jumbo/Jumbo';
-import TableInfo from './components/TableInfo/TableInfo';
+// import TableInfo from './components/TableInfo/TableInfo';
+import Table from './components/Table/Table';
 
 import React from "react";
 
@@ -12,10 +13,11 @@ function App() {
     
   return (
     
-    <div className="App">
+    <div>
 
       <Jumbotron/>
-      <TableInfo/>
+      <Table></Table>
+      {/* <TableInfo/> */}
     
 
     </div>
