@@ -14,7 +14,7 @@ export default class TableInfo extends Component() {
     // }, []);
     state = {
         search: "name",
-        employees: []
+        employees: [{}]
     };
 
     componentDidMount = () => {
@@ -94,7 +94,7 @@ export default class TableInfo extends Component() {
     }
 
 
-    return (
+    render () {
 
         <div className="App">
             {/* <h2>The JSON below is loaded from an external API!</h2>
@@ -106,8 +106,8 @@ export default class TableInfo extends Component() {
       //   <TableBootstrap />
 
       // </div>
-    );
-
+    
+    }
 }
 
 export default TableInfo;
