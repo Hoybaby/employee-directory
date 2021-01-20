@@ -30,11 +30,22 @@ class Table extends React.Component {
         });
     };
 
+    sortByName() {
+        if (this.state.sortDirection <1 ) {
+            this.setState({
+                employees: this.state.employees.sort((a,b) => 
+                    a.name.first > b.name.first ? 1 : -1
+                    ),
+            });
 
-
-
-
-
-
-
+            this.setState({ sortDirection: 1});
+            
+        } else {
+            this.setState({
+                employees: this.state.users.sort((a,b) => 
+                    a.name <b.name.first ? 1: -1),
+            });
+            this.setState({ sortDirection: 0});
+        }
+    }
 }
