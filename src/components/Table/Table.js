@@ -4,13 +4,6 @@ import React from 'react';
 
 const TableBootstrap = () => {
   
-    
-    
-    
-    
-    
-    
-    
     return (
         <table className="table table-striped">
             <thead>
@@ -24,7 +17,7 @@ const TableBootstrap = () => {
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
+                    <td>{employee.name.first}</td>
                     <td>Otto</td>
                     <td>email1</td>
                 </tr>
