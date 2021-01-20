@@ -55,11 +55,45 @@ class Table extends React.Component {
         return (
             <div>
                 <Search search={this.state.search} handleInputChange={this.handleInputChange}/>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Iamge</th>
+                            <th onClick={() => this.sortByName()}Name></th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Date of Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { this.state.users
+                            .filter(
+                                (user) =>
+                                    user.name.first
+                                        .toLowerCase()
+                                        .includes(this.state.search.toLocaleLowerCase()) ||
+                                    user.name.last
+                                        .toLowerCase()
+                                        .includes(this.state.search.toLowerCase())
+                            )
+                            .map((user) => (
+                                <tr key={user.name}>
+                                    <td>
+                                        <img src={user.picture.thumbnail} alt=""></img>
+                                    </td>
+                                    <td>
+                                        {user.name.first} {user.name.last}
+                                    </td>
+                                    <td>{user.phone}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.dob.date}</td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
             </div>
         )
     }
-
-
-
 }
 
+export default Table;
