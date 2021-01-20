@@ -17,7 +17,7 @@ const TableBootstrap = () => {
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>{employee.name.first}</td>
+                    <td>Mark</td>
                     <td>Otto</td>
                     <td>email1</td>
                 </tr>

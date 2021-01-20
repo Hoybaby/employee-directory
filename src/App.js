@@ -4,7 +4,7 @@ import Jumbotron from './components/Jumbo/Jumbo';
 import Search from './components/Search/Search';
 import TableBootstrap from './components/Table/Table';
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { render } from '@testing-library/react';
 import getEmplyoeeName from './utils/API';
 
@@ -38,7 +38,7 @@ function App() {
       )
     }
 
-    lloadEmployees = () => [
+    loadEmployees = () => [
       getEmployeeName()
           .then((response) => {
               console.log(response);
@@ -68,11 +68,39 @@ function App() {
             .join("")
             .toLowerCase();
           return values.indexOf(filter.toLowerCase()) !== -1;
-        })
+        });
+
+        this.setState(
+          {
+            employees:filteredList
+          }
+        )
+
+
+      })
+
+      .catch((err)=> {
+        console.log(err);
+
       })
   }
 
-  
+  handleInputSubmit = (event) => {
+        event.preventDefault();
+        console.log("stuff");
+    
+        this.searchEmployee();
+
+    }
+
+    
+    SortByName = (e) => {
+        function handleClick(e) {
+            e.preventDefault();
+            console.log('The link was clicked!');
+        }
+    }
+
     
   return (
     

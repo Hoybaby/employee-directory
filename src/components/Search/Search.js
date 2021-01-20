@@ -1,8 +1,6 @@
 import "./style.css";
 import React from "react";
 
-
-
 function Search() {
     return (
         <div>
@@ -22,7 +20,7 @@ function Search() {
     )
 }
 
-export default Search
+export default Search;
 
 
 // const Search = (props) => {
