@@ -4,11 +4,11 @@ import React from "react";
 
 
 
-function Search(props) {
+function Search({handleInputChange}) {
     return (
         <div className="container-fluid-center">
             <form className='d-flex'>
-                <input name="search" className="form-control me-2" type="text" placeholder="Search" value={props.search} onChange={props.handleInputChance}/>
+                <input name="search" className="form-control me-2" type="text" placeholder="Search" onChange={e => handleInputChange(e)}/>
             </form>
         </div>
 

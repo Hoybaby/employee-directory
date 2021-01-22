@@ -13,17 +13,11 @@ function App() {
   
     
   return (
-    
     <div>
-
       <Jumbotron/>
-
       <Table>
-        
       </Table>
       {/* <TableInfo/> */}
-    
-
     </div>
   );
   

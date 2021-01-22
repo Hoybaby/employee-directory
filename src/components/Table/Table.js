@@ -71,7 +71,7 @@ class Table extends React.Component {
                                 (employees) =>
                                     employees.name.first
                                         .toLowerCase()
-                                        .includes(this.state.search.toLocaleLowerCase()) ||
+                                        .includes(this.state.search.toLowerCase()) ||
                                     employees.name.last
                                         .toLowerCase()
                                         .includes(this.state.search.toLowerCase())
